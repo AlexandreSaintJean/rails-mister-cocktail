@@ -1,15 +1,18 @@
 
 <div class="container">
   <h1>Cocktails Listing</h1>
-<%= cl_image_tag("kfvs7eddpnwdzwitfmy5.jpg",
-      width: 400, height: 300, crop: :fill) %>
 
   <% @cocktails.each do |cocktail| %>
-  <ul>
-    <li>
-      <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    </li>
-  </ul>
+  <div class="card">
+    <ul>
+      <li>
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        <% if cocktail.photos? %>
+          <%= cl_image_tag cocktail.photos.first.path, width: 600, height: 150, crop: :fill %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
   <% end %>
 
 </div>

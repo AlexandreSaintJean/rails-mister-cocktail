@@ -2,6 +2,12 @@
 
   <div class="cocktail-details">
     <h1><%= @cocktail.name %></h1>
+    <% if @cocktail.photos? %>
+      <% @cocktail.photos.each do |photo| %>
+        <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
+      <% end %>
+    <% end %>
+
 
       <% @cocktail.doses.each do |dose| %>
     <ul>

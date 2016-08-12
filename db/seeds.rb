@@ -17,4 +17,4 @@ Ingredient.create(name: "mint leaves")
 
 Cocktail.create(name: "Mojito")
 
-Dose.create(description: "6cl lime", restaurant_id: restaurants.last, ingredient_id: ingredients.last )
+#Dose.create(description: "6cl lime", cocktail_id: Cocktail.last, ingredient_id: ingredients.last )

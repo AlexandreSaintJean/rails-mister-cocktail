@@ -26,8 +26,10 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'cloudinary', '1.1.0'
-#link model to cloudinary
-gem 'carrierwave'
+gem "jquery-fileupload-rails"
+gem "attachinary", "1.3.1"
+gem 'responders'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
